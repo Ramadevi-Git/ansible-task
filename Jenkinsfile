@@ -27,8 +27,8 @@ pipeline {
             steps {
                 script {
                    sleep '360'
-                    ansiblePlaybook becomeUser: 'ec2-user', credentialsId: 'amazonlinux', disableHostKeyChecking: true, installation: 'ansible', inventory: '/var/lib/jenkins/workspace/challenge/terraform' , playbook: '/var/lib/jenkins/workspace/challenge/terraform', vaultTmpPath: ''
-                    ansiblePlaybook become: true, credentialsId: 'ubuntuuser', disableHostKeyChecking: true, installation: 'ansible', inventory: '/var/lib/jenkins/workspace/challenge/terraform', playbook: '/var/lib/jenkins/workspace/challenge/terraform', vaultTmpPath: ''
+                    ansiblePlaybook becomeUser: 'ec2-user', credentialsId: 'amazonlinux', disableHostKeyChecking: true, installation: 'ansible', inventory: '/var/lib/jenkins/workspace/challenge' , playbook: '/var/lib/jenkins/workspace/challenge', vaultTmpPath: ''
+                    ansiblePlaybook become: true, credentialsId: 'ubuntuuser', disableHostKeyChecking: true, installation: 'ansible', inventory: '/var/lib/jenkins/workspace/challenge', playbook: '/var/lib/jenkins/workspace/challenge', vaultTmpPath: ''
                 }
             }
         }
