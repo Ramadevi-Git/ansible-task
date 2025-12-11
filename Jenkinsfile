@@ -32,7 +32,7 @@ pipeline {
 
                     // --- AMAZON LINUX (frontend) ---
                     ansiblePlaybook(
-                        credentialsId: 'ec2-key',
+                        credentialsId: 'ansible',
                         disableHostKeyChecking: true,
                         installation: 'ansible',
                         inventory: 'inventory.yaml',
@@ -45,7 +45,7 @@ pipeline {
                     // --- UBUNTU (backend, only if needed) ---
                     ansiblePlaybook(
                         become: true,
-                        credentialsId: 'ec2-key',
+                        credentialsId: 'ansible',
                         disableHostKeyChecking: true,
                         installation: 'ansible',
                         inventory: 'inventory.yaml',
